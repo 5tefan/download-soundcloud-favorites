@@ -24,7 +24,7 @@ for track in favorites:
     username = artist["username"]   
     print(a,title,' by ',username)
     
-
+print()
 n = int(input('How many songs would you like to download ?'))
 print()
 numbers = input('Songs to be excluded: ').split(",")
