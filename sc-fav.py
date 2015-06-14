@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import urllib
-from mutagen.easyid3 import EasyID3
 from mutagen.mp3 import MP3
 from mutagen.id3 import ID3, APIC, error, TIT2, TPE1
 from progressbar import FileTransferSpeed,Percentage,ProgressBar
@@ -37,7 +36,7 @@ def progress(count, blockSize, totalSize):
 i=0
 for track in favorites[:n]:
     
-    no=favorites.index(track)
+    no=favorites.index(track) # Checks if the track is exluded
     if str(no+1) in numbers:
         continue
     #Getting all the data from soundcloud
@@ -49,11 +48,11 @@ for track in favorites[:n]:
     stream_url = client.get(track.stream_url, allow_redirects=False)
     url = stream_url.location.replace('https', 'http')
     format = '.mp3'
-    filename= title +format
+    filename= title + format
     i=i+1
     widgets = ['Downloading  ', title ,': ',Percentage(), FileTransferSpeed(),'  (',str(i),'/',str(n-len(numbers)),')',]
     pbar = ProgressBar(widgets=widgets).start()
-    urllib.request.urlretrieve(url, filename, reporthook=progress)
+    urllib.request.urlretrieve(url, filename, reporthook=progress) # Downloads, reports the progress to the progress function
     
     #Adding tags
     file = MP3(filename, ID3=ID3)
@@ -74,11 +73,11 @@ for track in favorites[:n]:
     )
     #Title
     file.tags.add(
-        TIT2(encoding=3, text= title)
+        TIT2(encoding=3, text = title)
         )
     #Artist
     file.tags.add(
-        TPE1(encoding=3, text= artist)
+        TPE1(encoding=3, text = artist)
         )
     
     file.save()
