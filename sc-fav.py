@@ -20,8 +20,7 @@ favorites = client.get('/me/favorites', limit=30)   # shows a list with your las
 for track in favorites:
     a=str(1+favorites.index(track))+'.'
     title = track.title
-    artist=track.user
-    username = artist["username"]   
+    artist = track.user["username"]    
     print(a,title,' by ',username)
     
 print()
