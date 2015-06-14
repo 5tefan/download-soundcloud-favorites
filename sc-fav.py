@@ -36,7 +36,7 @@ def progress(count, blockSize, totalSize):
 i=0
 for track in favorites[:n]:
     
-    no=favorites.index(track) # Checks if the track is exluded
+    no=favorites.index(track) # Checks if the track is excluded
     if str(no+1) in numbers:
         continue
     #Getting all the data from soundcloud
