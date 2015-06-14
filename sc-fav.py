@@ -30,7 +30,7 @@ numbers = input('Songs to be excluded: ').split(",")
 def progress(count, blockSize, totalSize):
     """ count : number of blocks downloaded ; blockSize : size of a single block (8192) ; total size of the file. urlretrieve update the content constantly"""
     total = totalSize//blockSize    #    number of blocks it will take to download the entire file
-    percent = int(100*count//total)     #   number of blocks for 1% of the file
+    percent = int(100*count//total)     #   current percentage downloaded
     pbar.update(percent)    #update the progress bar by 1% if reached
 
 i=0
