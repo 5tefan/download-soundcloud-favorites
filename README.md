@@ -15,6 +15,8 @@ Python script to automatically download up to 1000 of your most recently liked s
 * A registered [Soundcloud app](http://soundcloud.com/you/apps/new) (for authentification)
 
 ## Usage
-Fill the required field for authentification, found [here](https://soundcloud.com/you/apps/) on your registered app.
 
-Songs will start downloading to the music/ directory.
+Copy the required info from [Soundcloud](https://soundcloud.com/you/apps/) to `sc-fav.py`.
+
+Execute `python sc-fav.py` and songs will start downloading to the music/ directory.
+
