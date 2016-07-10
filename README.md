@@ -1,14 +1,20 @@
 # Soundcloud favorites
-Python script to automatically download your recently liked songs from Soundcloud, with embedded picture, title and artist tag.
 
-Shows a list of your recently liked songs, you can then exclude some of them if you want, then proceed to download (with speed and percentage showing) the song, retrieve the cover picture, artist and title and apply the tags to the file.
+Python script to automatically download up to 1000 of your most recently liked songs from Soundcloud.
+
+## Features
+
+* Embeds cover picture, title, artist, and tags
+* Progress indicated with speed and percent completion
 
 ## Requirement
 
-* [Mutagen](https://bitbucket.org/lazka/mutagen/downloads)
-* [ProgressBar](https://pypi.python.org/pypi/progressbar)
-* [Soundcloud](https://github.com/soundcloud/soundcloud-python)
+* [Mutagen](https://bitbucket.org/lazka/mutagen/downloads) for mp3
+* [ProgressBar](https://pypi.python.org/pypi/progressbar) to display progress
+* [Soundcloud](https://github.com/soundcloud/soundcloud-python) interface
 * A registered [Soundcloud app](http://soundcloud.com/you/apps/new) (for authentification)
 
 ## Usage
-Fill the required field for authentification, found [here](https://soundcloud.com/you/apps/) on your registered app. After the list of songs shows up, enter the number of sound you'd like to download (10 for the first 10 songs). To exclude any song, enter the numbers separated by comas when asked.
+Fill the required field for authentification, found [here](https://soundcloud.com/you/apps/) on your registered app.
+
+Songs will start downloading to the music/ directory.
