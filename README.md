@@ -14,7 +14,7 @@ Python 2.7 script to automatically download up to 1000 of your most recently <3 
 * [Soundcloud](https://github.com/soundcloud/soundcloud-python), `pip install soundcloud` soundcloud api
 * A registered [Soundcloud app](http://soundcloud.com/you/apps/new) (for authentification)
 
-Install all at once with `pip install mutagen progressbar soundcloud`
+Install all dependencies at once with `pip install mutagen progressbar soundcloud`
 
 ## Usage
 
